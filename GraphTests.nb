@@ -1,0 +1,450 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17685,        442]
+NotebookOptionsPosition[     16453,        408]
+NotebookOutlinePosition[     16871,        425]
+CellTagsIndexPosition[     16828,        422]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Graphs in WL: Some Tests (AMS4)", "Title",
+ CellChangeTimes->{{3.9064753556574483`*^9, 
+  3.906475367700801*^9}},ExpressionUUID->"de69e3c4-2eef-41d1-8f14-\
+12b6d6577d98"],
+
+Cell[CellGroupData[{
+
+Cell["Incidence Matrix (vs Adjacency Matrix)", "Section",
+ CellChangeTimes->{{3.9064754013637133`*^9, 
+  3.906475411042274*^9}},ExpressionUUID->"4f3e17a2-e752-4dab-a292-\
+c2f1e6ba96ce"],
+
+Cell[CellGroupData[{
+
+Cell["Usage", "Subsection",ExpressionUUID->"ecba8ffb-2484-43f0-be63-c17a108b533a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "IncidenceMatrix"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"baa997e7-9710-4e44-aee5-caf6556f85be"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/IncidenceMatrix",
+              ButtonNote->"paclet:ref/IncidenceMatrix"],
+             "\"paclet:ref/IncidenceMatrix\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"IncidenceMatrix\\\", \
+\\\"[\\\", StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the \
+vertex-edge incidence matrix of the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\
+\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"IncidenceMatrix\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \\\"\
+\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\"]\\\"}]\\) uses rules \\!\\(\
+\\*RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \\\"\[Rule]\\\", StyleBox[\\\"w\\\
+\", \\\"TI\\\"]}]\\) to specify the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\
+\\\"]\\). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", 
+                    "paclet:ref/IncidenceMatrix", 
+                    "paclet:ref/IncidenceMatrix", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"], "\"  \"", 
+                    StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False], 
+                    "\"  \"", 
+                    TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/\
+IncidenceMatrix.html"], None}, 
+                    "http://reference.wolfram.com/language/ref/\
+IncidenceMatrix.html", "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`IncidenceMatrix\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{13., {4., 9.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/IncidenceMatrix",
+              ButtonNote->"paclet:ref/IncidenceMatrix"],
+             "\"paclet:ref/IncidenceMatrix\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"IncidenceMatrix\\\", \
+\\\"[\\\", StyleBox[\\\"g\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the \
+vertex-edge incidence matrix of the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\
+\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"IncidenceMatrix\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \\\"\
+\[Rule]\\\", StyleBox[\\\"w\\\", \\\"TI\\\"]}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\"]\\\"}]\\) uses rules \\!\\(\
+\\*RowBox[{StyleBox[\\\"v\\\", \\\"TI\\\"], \\\"\[Rule]\\\", StyleBox[\\\"w\\\
+\", \\\"TI\\\"]}]\\) to specify the graph \\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\
+\\\"]\\). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{10., {3., 7.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{10., {3., 7.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"IncidenceMatrix\", \"[\", StyleBox[\"g\", \"TI\"], \
+\"]\"}]\) gives the vertex-edge incidence matrix of the graph \!\(\*StyleBox[\
+\"g\", \"TI\"]\).\n\!\(\*RowBox[{\"IncidenceMatrix\", \"[\", RowBox[{\"{\", \
+RowBox[{RowBox[{StyleBox[\"v\", \"TI\"], \"\[Rule]\", StyleBox[\"w\", \
+\"TI\"]}], \",\", StyleBox[\"\[Ellipsis]\", \"TR\"]}], \"}\"}], \"]\"}]\) \
+uses rules \!\(\*RowBox[{StyleBox[\"v\", \"TI\"], \"\[Rule]\", \
+StyleBox[\"w\", \"TI\"]}]\) to specify the graph \!\(\*StyleBox[\"g\", \
+\"TI\"]\). ", 
+    "Documentation" -> <|
+     "Local" -> "paclet:ref/IncidenceMatrix", "Web" -> 
+      "http://reference.wolfram.com/language/ref/IncidenceMatrix.html"|>, 
+    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, 
+    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
+    "FormatValues" -> None, "Options" -> None, "Attributes" -> {Protected}, 
+    "FullName" -> "System`IncidenceMatrix"|>, False]]], "Output",
+ CellChangeTimes->{3.906475417725721*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"29879a5e-de02-47c1-b16e-a922378e76db"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["General Graphs", "Section",
+ CellChangeTimes->{{3.906475722262028*^9, 
+  3.9064757247866526`*^9}},ExpressionUUID->"8e1a3df5-3d3c-4776-b445-\
+0760229e52cc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", " ", "=", 
+  RowBox[{"Graph", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[DirectedEdge]", "2"}], ",", 
+     RowBox[{"2", "\[DirectedEdge]", "3"}], ",", 
+     RowBox[{"3", "\[DirectedEdge]", "1"}]}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9064756241252794`*^9, 3.906475680794423*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"1455f6a5-7bc5-408f-86d1-eddd3c5ab2c8"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3}, {{{1, 2}, {2, 3}, {3, 1}}, Null}]]}, 
+    TagBox[
+     GraphicsGroupBox[
+      GraphicsComplexBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+       0.8660254037844389, -0.5000000000000012}, {1.8369701987210297`*^-16, 
+       1.}}, {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+         ArrowBox[{{1, 2}, {2, 3}, {3, 1}}, 0.020399597244776385`]}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.020399597244776385], DiskBox[2, 0.020399597244776385], 
+         DiskBox[3, 0.020399597244776385]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->"NetworkGraphics",
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->{141.5, Automatic}]], "Output",
+ CellChangeTimes->{3.906475681757231*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"c8332653-0b9e-48c2-b04b-4808805f896e"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{954, 685},
+WindowMargins->{{44, Automatic}, {26, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7f337fe0-29a0-409c-abde-db8ba05923d6"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 176, 3, 98, "Title",ExpressionUUID->"de69e3c4-2eef-41d1-8f14-12b6d6577d98"],
+Cell[CellGroupData[{
+Cell[781, 29, 185, 3, 67, "Section",ExpressionUUID->"4f3e17a2-e752-4dab-a292-c2f1e6ba96ce"],
+Cell[CellGroupData[{
+Cell[991, 36, 82, 0, 54, "Subsection",ExpressionUUID->"ecba8ffb-2484-43f0-be63-c17a108b533a"],
+Cell[CellGroupData[{
+Cell[1098, 40, 136, 2, 28, "Input",ExpressionUUID->"baa997e7-9710-4e44-aee5-caf6556f85be"],
+Cell[1237, 44, 13471, 312, 119, "Output",ExpressionUUID->"29879a5e-de02-47c1-b16e-a922378e76db"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14769, 363, 161, 3, 67, "Section",ExpressionUUID->"8e1a3df5-3d3c-4776-b445-0760229e52cc"],
+Cell[CellGroupData[{
+Cell[14955, 370, 412, 9, 28, "Input",ExpressionUUID->"1455f6a5-7bc5-408f-86d1-eddd3c5ab2c8"],
+Cell[15370, 381, 1043, 22, 140, "Output",ExpressionUUID->"c8332653-0b9e-48c2-b04b-4808805f896e"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
